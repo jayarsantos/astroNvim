@@ -12,6 +12,9 @@ return {
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
   dependencies = { "nvim-lua/plenary.nvim" },
+  run = ":Neorg sync-parsers",
+  event = "VeryLazy",
+  enabled = true,
   config = function()
     require("neorg").setup {
       load = {
